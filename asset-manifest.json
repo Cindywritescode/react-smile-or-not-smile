@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/react-smile-or-not-smile/static/css/main.39b962b2.chunk.css",
+    "main.js": "/react-smile-or-not-smile/static/js/main.21ea56b2.chunk.js",
+    "main.js.map": "/react-smile-or-not-smile/static/js/main.21ea56b2.chunk.js.map",
+    "runtime-main.js": "/react-smile-or-not-smile/static/js/runtime-main.e3554e3d.js",
+    "runtime-main.js.map": "/react-smile-or-not-smile/static/js/runtime-main.e3554e3d.js.map",
+    "static/js/2.5ee1ab8a.chunk.js": "/react-smile-or-not-smile/static/js/2.5ee1ab8a.chunk.js",
+    "static/js/2.5ee1ab8a.chunk.js.map": "/react-smile-or-not-smile/static/js/2.5ee1ab8a.chunk.js.map",
+    "static/js/3.9e33c9ab.chunk.js": "/react-smile-or-not-smile/static/js/3.9e33c9ab.chunk.js",
+    "static/js/3.9e33c9ab.chunk.js.map": "/react-smile-or-not-smile/static/js/3.9e33c9ab.chunk.js.map",
+    "index.html": "/react-smile-or-not-smile/index.html",
+    "static/css/main.39b962b2.chunk.css.map": "/react-smile-or-not-smile/static/css/main.39b962b2.chunk.css.map",
+    "static/js/2.5ee1ab8a.chunk.js.LICENSE.txt": "/react-smile-or-not-smile/static/js/2.5ee1ab8a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e3554e3d.js",
+    "static/js/2.5ee1ab8a.chunk.js",
+    "static/css/main.39b962b2.chunk.css",
+    "static/js/main.21ea56b2.chunk.js"
+  ]
+}
