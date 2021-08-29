@@ -15,7 +15,6 @@ const App = () => {
     const day = date.getDay() === 0 ? 7 : date.getDay();
     const week = getWeek();
     const dailyHappiness = (week + day) * 7 % 10;
-    // console.log(dailyHappiness);
 
     return (
         <Container>
