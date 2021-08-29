@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from "styled-components";
+import {Lip} from "./components/Lip";
+import {Eye} from "./components/Eye";
+import {Box} from "./components/UI/Box";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const getWeek = () => {
+    const today = new Date()
+    const firstOfJan = new Date(today.getFullYear(), 0, 1);
+    const numberOfDays = Math.floor((today - firstOfJan) / (24 * 60 * 60 * 1000));
+    return Math.floor(numberOfDays / 7);
 }
+
+const App = () => {
+    const date = new Date();
+    const day = date.getDay() === 0 ? 7 : date.getDay();
+    const week = getWeek();
+    const dailyHappiness = (week + day) * 7 % 10;
+    // console.log(dailyHappiness);
+
+    return (
+        <Container>
+            <Box direction='column'>
+                <Box direction='row' justify='space-between'>
+                    <Box justify='center' align='center'><Eye/></Box>
+                    <Box justify='center' align='center'><Eye/></Box>
+                </Box>
+                <Box justify='center' align='center'>
+                    <Lip happinessLevel={dailyHappiness}/>
+                </Box>
+            </Box>
+        </Container>
+    );
+}
+
+const Container = styled.div`
+  display: flex;
+  flex-grow: 1;
+  background-color: #f6d87a;
+`
 
 export default App;
