@@ -1,5 +1,7 @@
 # React smile or not smile app
-Broadcast your daily happiness
+#### Broadcast your daily happiness
+
+This app will showcase different facial expressions by date. Open the page to see how's your daily happiness would be like for today :)
 
 [view page](https://cindywritescode.github.io/react-smile-or-not-smile/)
 
