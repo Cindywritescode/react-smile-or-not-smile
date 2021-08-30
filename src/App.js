@@ -24,7 +24,7 @@ const App = () => {
                     <Box justify='center' align='center'><Eye orientation={dailyEye}/></Box>
                     <Box justify='center' align='center'><Eye orientation={dailyEye}/></Box>
                 </Box>
-                <Box justify='center' align='center'>
+                <Box justify='center' align='center' xsAlign='flex-start'>
                     <Lip happinessLevel={dailyHappiness}/>
                 </Box>
             </Box>
