@@ -17,7 +17,53 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v1
         
+      - name: Install dependencies
+        run: npm i
+        
       - name: Run tests
+        run: npm test -- --verbose
+        
+  build:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        
+      - name: Install dependencies
+        run: npm i
+        
+      - name: Build
+        run: npm run build
+        
+      - name: Production artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: build
+          path: build/
+          
+  deploy:
+    needs: [test, build]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy
+        uses: actions/checkout@v2
+        with:
+          ref: gh-pages
+        
+      - name: Download all production artifacts
+        uses: actions/download-artifact@v2
+        with:
+          name: build
+        
+      - name: Commit changes
         run: |
-          npm i
-          npm test -- --verbose
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "Generated new React app..."
+          git push
+      
+    
