@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react-smile-or-not-smile/static/css/main.39b962b2.chunk.css",
-    "main.js": "/react-smile-or-not-smile/static/js/main.21ea56b2.chunk.js",
-    "main.js.map": "/react-smile-or-not-smile/static/js/main.21ea56b2.chunk.js.map",
+    "main.js": "/react-smile-or-not-smile/static/js/main.12b1ee2d.chunk.js",
+    "main.js.map": "/react-smile-or-not-smile/static/js/main.12b1ee2d.chunk.js.map",
     "runtime-main.js": "/react-smile-or-not-smile/static/js/runtime-main.e3554e3d.js",
     "runtime-main.js.map": "/react-smile-or-not-smile/static/js/runtime-main.e3554e3d.js.map",
     "static/js/2.5ee1ab8a.chunk.js": "/react-smile-or-not-smile/static/js/2.5ee1ab8a.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.e3554e3d.js",
     "static/js/2.5ee1ab8a.chunk.js",
     "static/css/main.39b962b2.chunk.css",
-    "static/js/main.21ea56b2.chunk.js"
+    "static/js/main.12b1ee2d.chunk.js"
   ]
 }
