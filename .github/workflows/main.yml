@@ -17,7 +17,38 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v1
         
+      - name: Install dependencies
+        run: npm i
+        
       - name: Run tests
-        run: |
-          npm i
-          npm test -- --verbose
+        run: npm test -- --verbose
+        
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        
+      - name: Install dependencies
+        run: npm i
+        
+      - name: Build
+        run: npm run build
+        
+      - name: Production artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: build
+          path: build/
+          
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download all production artifacts
+        uses: actions/download-artifact@v2
+      - name: Deploy
+        run: echo Deploying...
+      
+    
