@@ -37,14 +37,12 @@ describe('Box properties', () => {
     test('Box should have align-items normal by default', () => {
         const {container} = render(<Box align='normal'/>);
         const component = container.firstChild
-        console.log(component);
         expect(component).toHaveStyle('align-items: normal')
     });
 
     test('Box should have align-items center', () => {
         const {container} = render(<Box align='center'/>);
         const component = container.firstChild
-        console.log(component);
         expect(component).toHaveStyle('align-items: center')
     });
 });
