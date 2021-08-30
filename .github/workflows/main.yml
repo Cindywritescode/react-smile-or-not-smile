@@ -46,9 +46,22 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: Deploy
+        uses: actions/checkout@v2
+        with:
+          ref: gh-pages
+        
       - name: Download all production artifacts
         uses: actions/download-artifact@v2
-      - name: Deploy
-        run: echo Deploying...
+        with:
+          name: build
+        
+      - name: Commit changes
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "Generated new React app..."
+          git push
       
     
