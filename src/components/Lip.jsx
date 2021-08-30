@@ -1,10 +1,12 @@
 import styled from "styled-components";
 
-export const Lip = ({happinessLevel}) => (
+export const Lip = ({happinessLevel = 5}) => (
     <LipSvg viewBox="0 0 100 30">
-        <path d={`M 5 ${30 - 2 * happinessLevel - 5} Q 50,${3 * happinessLevel} 95,${30 - 2 * happinessLevel - 5}`}/>
+        <path d={calculatePath(happinessLevel)}/>
     </LipSvg>
 )
+
+export const calculatePath = (level) => `M 5 ${30 - 2 * level - 5} Q 50,${3 * level} 95,${30 - 2 * level - 5}`
 
 const LipSvg = styled.svg`
   width: 50vw;
