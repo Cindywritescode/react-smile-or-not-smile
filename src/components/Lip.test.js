@@ -64,4 +64,11 @@ describe('Lip behaviour', () => {
         expect(calculatePath(level)).toBe(expectedPath)
     })
 
+    test('Lip should have animation, and start from flat face to happiness level', () => {
+        const {container} = render(<Lip happinessLevel={0}/>);
+        const component = container.querySelector('animate');
+        expect(component).toBeInTheDocument();
+        expect(component.getAttribute('from')).toBe(calculatePath(5));
+        expect(component.getAttribute('to')).toBe(calculatePath(0));
+    })
 })

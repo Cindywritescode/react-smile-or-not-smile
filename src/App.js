@@ -14,14 +14,15 @@ const App = () => {
     const date = new Date();
     const day = date.getDay() === 0 ? 7 : date.getDay();
     const week = getWeek();
-    const dailyHappiness = (week + day) * 7 % 10;
+    const dailyHappiness = ((week + day) * 7) % 10;
+    const dailyEye = (week * day * 7 * 11) % 100;
 
     return (
         <Container>
             <Box direction='column'>
                 <Box direction='row' justify='space-between'>
-                    <Box justify='center' align='center'><Eye/></Box>
-                    <Box justify='center' align='center'><Eye/></Box>
+                    <Box justify='center' align='center'><Eye orientation={dailyEye}/></Box>
+                    <Box justify='center' align='center'><Eye orientation={dailyEye}/></Box>
                 </Box>
                 <Box justify='center' align='center'>
                     <Lip happinessLevel={dailyHappiness}/>

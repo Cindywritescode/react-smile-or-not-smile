@@ -2,7 +2,9 @@ import styled from "styled-components";
 
 export const Lip = ({happinessLevel = 5}) => (
     <LipSvg viewBox="0 0 100 30">
-        <path d={calculatePath(happinessLevel)}/>
+        <path d={calculatePath(happinessLevel)}>
+            <animate attributeName='d' from={calculatePath(5)} to={calculatePath(happinessLevel)} dur='1s'/>
+        </path>
     </LipSvg>
 )
 
